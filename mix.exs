@@ -71,7 +71,7 @@ defmodule Stripe.Mixfile do
       links: %{
         "GitHub" => "https://github.com/code-corps/stripity-stripe"
       },
-      maintainers: ["Dan Matthews", "Josh Smith"]
+      maintainers: ["Josh Smith", "Nikola Begedin"]
     ]
   end
 end
