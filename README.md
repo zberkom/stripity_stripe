@@ -48,8 +48,16 @@ config :stripity_stripe,
 
 ## Testing
 
+### Requirements
+
+You'll need to install Stripe's own [`stripe-mock`](https://github.com/stripe/stripe-mock), which is a mock HTTP server that responds like the real Stripe API. Your version should match up to the `STRIPE_MOCK_VERSION` defined in `.travis.yml` and must be available in your `PATH`, or set with the `:stripe_mock_path` option.
+
+### Running the tests
+
 All tests have the @tag disabled: false and the test runner is configured to
 ignore disabled: true. This helps to turn tests on/off when working in them.
+
+To run the tests, simply run:
 
 ```
 mix test
