@@ -17,23 +17,23 @@ defmodule Stripe.Tokens do
   ##Example
   ```
      # payload for credit card token
-      params = [
-            card: [
+      params = %{
+            card: %{
                 number: "4242424242424242",
                 exp_month: 8,
                 exp_year: 2016,
                 cvc: "314"
-            ]
-      ]
+            }
+      }
       # payload for a bank account token
-      params: [
-        bank_account: [
+      params: %{
+        bank_account: %{
             country: "US",
             currency: "usd",
             routing_number: "110000000",
             account_number: "000123456789"
-        ]
-      ]
+        }
+      }
      {:ok, token} = Stripe.Tokens.create params
      IO.puts token.id
 
